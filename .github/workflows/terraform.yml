@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      AWS_ACCESS_KEY_ID: "AKIARPQYUB4NC7LBRYV4"
-      AWS_SECRET_ACCESS_KEY: "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"
+      AWS_ACCESS_KEY_ID: ${{AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{AWS_SECRET_ACCESS_KEY}}
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
