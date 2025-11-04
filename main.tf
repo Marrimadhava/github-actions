@@ -3,7 +3,7 @@ module "eks" {
   version = "~> 19.0"
 
   cluster_name    = "my-cluster"
-  cluster_version = "1.27"
+  cluster_version = "1.33"
 
   cluster_endpoint_public_access  = true
 
@@ -16,11 +16,11 @@ module "eks" {
   eks_managed_node_groups = {
     blue = {}
     green = {
-      min_size     = 1
-      max_size     = 2
-      desired_size = 1
+      min_size     = 3
+      max_size     = 3
+      desired_size = 3
 
-      instance_types = ["t2.large"]
+      instance_types = ["t3.large"]
       capacity_type  = "SPOT"
     }
   }
